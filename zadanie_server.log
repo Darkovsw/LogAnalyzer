@@ -1,0 +1,36 @@
+2018-12-04 11:37:20,321 INFO  [org.jboss.modules] (main) JBoss Modules version 1.4.3.Final
+2017-12-04 11:37:20,733 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2017-12-04 11:37:20,830 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) starting
+2017-12-04 11:37:20,833 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties
+2017-12-04 11:37:22,280 FATAL [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0056: Server boot has failed in an unrecoverable manner; exiting. See previous messages for details.
+2017-12-04 11:37:22,282 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested.
+2017-12-04 11:37:22,292 INFO  [org.jboss.as] (MSC service thread 1-5) WFLYSRV0050: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) stopped in 2ms
+2017-12-04 11:41:44,403 INFO  [org.jboss.modules] (main) JBoss Modules version 1.4.3.Final
+2017-12-04 11:41:44,667 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2017-12-04 11:41:44,748 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) starting
+2017-12-04 11:41:44,750 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = \
+2017-12-04 11:41:44,751 DEBUG [org.jboss.as.config] (MSC service thread 1-6) VM Arguments: -Dprogram.name=standalone.bat  
+2017-12-04 11:41:45,757 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 15) WFLYCTL0028: Attribute 'job-repository-type' in the resource at address '/subsystem=batch' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-12-04 11:41:45,819 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-12-04 11:41:45,839 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.3.1.Final
+2017-12-04 11:41:45,848 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.3.1.Final
+2017-12-05 13:43:28,996 INFO  [stdout] (ServerService Thread Pool -- 79) Node: node1test
+
+2017-12-05 13:43:29,616 INFO  [stdout] (ServerService Thread Pool -- 79) 
+2017-12-12 11:36:52,047 ERROR [org.jboss.msc.service.fail] (ServerService Thread Pool -- 59) MSC000001:Failed to start service jboss.persistenceunit: org.jboss.msc.service.StartException in service jboss.persistenceunit: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:172)
+	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:117)
+	at org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:665)
+	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1.run(PersistenceUnitServiceImpl.java:182)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:104)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:71)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:205)
